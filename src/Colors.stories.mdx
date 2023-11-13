@@ -1,0 +1,51 @@
+{/* palette.primary.mdx */}
+
+import { Meta, Colorpalette.primary, ColorItem } from "@storybook/blocks";
+import theme from "./Theme/Theme";
+
+<Meta title="palette.primary" />
+
+<Colorpalette.primary>
+  <ColorItem
+    title="White"
+    palette.primary={{
+      white01: theme.palette.primary.white01,
+      white02: theme.palette.primary.white02,
+      white03: theme.palette.primary.white03,
+    }}
+  />
+  <ColorItem
+    title="Gray"
+    palette.primary={{
+      gray01: theme.palette.primary.gray01,
+      gray02: theme.palette.primary.gray02,
+  
+    }}
+  />
+  <ColorItem
+    title="Blue"
+    palette.primary={{
+      blue01: theme.palette.primary.blue01,
+      blue02: theme.palette.primary.blue02,
+      blue03: theme.palette.primary.blue03,
+      blue04: theme.palette.primary.blue04,
+      blue05: theme.palette.primary.blue05,
+    }}
+  />
+   
+  <ColorItem
+    title="Error"
+    palette.primary={{
+      error01: theme.palette.primary.error01,
+      error02: theme.palette.primary.error02,
+    }}
+  />
+  <ColorItem
+    title="Sucess"
+    palette.primary={{
+    success: theme.palette.primary.success,
+    }}
+
+/>
+
+</Colorpalette.primary>
