@@ -13,6 +13,7 @@ import {
 import styled from "styled-components";
 import { useState } from "react";
 import { Theme } from "../../Theme";
+import React from "react";
 
 export const StyledBottomNavigation = styled(BottomNavigation)`
   &.${bottomNavigationClasses.root} {

@@ -9,6 +9,7 @@ import { StyledInputLabel } from "./TextField";
 import styled from "styled-components";
 import { Control, FieldValues, useController } from "react-hook-form";
 import { Theme } from "../../Theme";
+import React from "react";
 
 export interface ISelectProps extends SelectProps {
   options: string[];

@@ -5,6 +5,7 @@ import { ContainedButton } from "../Button/Contained";
 import { AlertProps } from "@mui/material";
 import { useState } from "react";
 import { Theme } from "../../Theme";
+import React from "react";
 
 export interface IActionProps {
   text: string;

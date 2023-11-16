@@ -2,6 +2,7 @@ import { ButtonProps, buttonClasses } from "@mui/material/Button";
 import styled from "styled-components";
 import { ButtonBase } from "./styled";
 import { Theme } from "../../Theme";
+import React from "react";
 
 export const StyledOutLinedButton = styled(ButtonBase)`
   &.${buttonClasses.root} {

@@ -2,6 +2,7 @@ import { Meta, Story } from "@storybook/react";
 import Dialog, { IDialogProps } from "./Dialog";
 import { ContainedButton } from "../Button/Contained";
 import { useState } from "react";
+import React from "react";
 
 const meta: Meta<typeof Dialog> = {
   title: "Feedback/Dialog",

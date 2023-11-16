@@ -16,6 +16,7 @@ import { OutlinedButton } from "../Button/Outlined";
 import { Close } from "@mui/icons-material";
 import styled from "styled-components";
 import { Theme } from "../../Theme";
+import React from "react";
 
 export interface IDialogProps extends DialogProps {
   title: string;
