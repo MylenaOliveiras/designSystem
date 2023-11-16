@@ -10,54 +10,53 @@ import {
   FormHelperText,
   formHelperTextClasses,
 } from "@mui/material";
+import { Theme } from "../../Theme";
 
 const StyledTextField = styled(InputBase)`
   &.${inputBaseClasses.root} {
     border-radius: 8px;
-    border: 1px solid #ececec;
+    border: 1px solid ${Theme.palette.white03};
     padding: 11px;
-    font-size: 16px;
+    font-size: ${Theme.typography.h2.fontSize};
 
     &:hover {
-      border: 1px solid #cfcfcf;
+      border: 1px solid ${Theme.palette.gray01};
     }
 
     &.${inputBaseClasses.disabled} {
-      background: #e4e4e4;
+      background: ${Theme.palette.white02};
       border: none;
     }
 
     &.${inputBaseClasses.focused} {
-      border: 2px solid #4894ff;
+      border: 2px solid ${Theme.palette.blue02};
     }
   }
 
   &.${inputBaseClasses.error} {
-    border: 2px solid #de0000;
+    border: 2px solid ${Theme.palette.error01};
   }
 `;
 
 export const StyledInputLabel = styled(InputLabel)`
   &.${inputLabelClasses.root} {
-    color: #898989;
-    line-height: 24px;
+    color: ${Theme.palette.gray02};
   }
 `;
 
 export const StyledFormHelperText = styled(FormHelperText)`
   &.${formHelperTextClasses.root} {
-    color: #de0000;
-    line-height: 24px;
+    color: ${Theme.palette.error01};
   }
 `;
 
-export interface IBaseProps extends InputBaseProps {
+export interface ITextFieldProps extends InputBaseProps {
   label?: string;
   name: string;
   control: Control<FieldValues>;
 }
 
-export const Base: React.FC<IBaseProps> = ({
+export const TextField: React.FC<ITextFieldProps> = ({
   name,
   disabled,
   label,

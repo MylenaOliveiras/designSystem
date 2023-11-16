@@ -8,6 +8,7 @@ import {
 import { StyledInputLabel } from "./TextField";
 import styled from "styled-components";
 import { Control, FieldValues, useController } from "react-hook-form";
+import { Theme } from "../../Theme";
 
 export interface ISelectProps extends SelectProps {
   options: string[];
@@ -19,24 +20,31 @@ export interface ISelectProps extends SelectProps {
 export const StyledSelect = styled(UnstyledSelect)`
   &.${inputBaseClasses.root} {
     border-radius: 8px;
-    min-width: 200px;
+    min-width: 220px;
 
-    &:hover {
-      border: 1px solid #cfcfcf;
+    fieldset {
+      border: 1px solid ${Theme.palette.white03};
     }
 
+    &:hover {
+      fieldset {
+        border: 1px solid ${Theme.palette.gray01};
+      }
+    }
     &.${inputBaseClasses.disabled} {
-      background: #f3f3f3;
+      background: ${Theme.palette.white03};
       border: none;
     }
 
     &.${inputBaseClasses.focused} {
-      border: 2px solid #4894ff;
+      fieldset {
+        border: 2px solid ${Theme.palette.blue02};
+      }
     }
   }
 
   &.${inputBaseClasses.error} {
-    border: 2px solid #de0000;
+    border: 2px solid ${Theme.palette.error01};
   }
 `;
 

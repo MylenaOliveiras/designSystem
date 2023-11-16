@@ -1,11 +1,10 @@
 import { ButtonProps, buttonClasses } from "@mui/material/Button";
 import styled from "styled-components";
 import { ButtonBase } from "./styled";
-import theme from "../../Theme/Theme";
+import { Theme } from "../../Theme";
 
 export const StyledOutLinedButton = styled(ButtonBase)`
   &.${buttonClasses.root} {
-    padding: 14px;
     border: 2px solid #4894ff;
 
     &:hover {
@@ -15,7 +14,7 @@ export const StyledOutLinedButton = styled(ButtonBase)`
     &:hover,
     &:focus,
     &:active {
-      color: ${theme.palette.};
+      color: ${Theme.palette.blue03};
     }
   }
 `;

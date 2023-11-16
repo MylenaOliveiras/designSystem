@@ -1,51 +1,54 @@
-{/* palette.primary.mdx */}
+{/* Colors.mdx */}
 
-import { Meta, Colorpalette.primary, ColorItem } from "@storybook/blocks";
-import theme from "./Theme/Theme";
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import { Theme } from "./Theme";
 
-<Meta title="palette.primary" />
+<Meta title="Colors" />
 
-<Colorpalette.primary>
+<ColorPalette>
   <ColorItem
     title="White"
-    palette.primary={{
-      white01: theme.palette.primary.white01,
-      white02: theme.palette.primary.white02,
-      white03: theme.palette.primary.white03,
+    colors={{
+      white01: Theme.palette.white01,
+      white02: Theme.palette.white02,
+      white03: Theme.palette.white03,
     }}
   />
   <ColorItem
     title="Gray"
-    palette.primary={{
-      gray01: theme.palette.primary.gray01,
-      gray02: theme.palette.primary.gray02,
-  
-    }}
-  />
-  <ColorItem
-    title="Blue"
-    palette.primary={{
-      blue01: theme.palette.primary.blue01,
-      blue02: theme.palette.primary.blue02,
-      blue03: theme.palette.primary.blue03,
-      blue04: theme.palette.primary.blue04,
-      blue05: theme.palette.primary.blue05,
-    }}
-  />
-   
-  <ColorItem
-    title="Error"
-    palette.primary={{
-      error01: theme.palette.primary.error01,
-      error02: theme.palette.primary.error02,
-    }}
-  />
-  <ColorItem
-    title="Sucess"
-    palette.primary={{
-    success: theme.palette.primary.success,
+    colors={{
+      gray01: Theme.palette.gray01,
+      gray02: Theme.palette.gray02,
+      gray03: Theme.palette.gray03,
+      gray04: Theme.palette.gray04,
+      gray05: Theme.palette.gray05,
+      gray06: Theme.palette.gray06,
+
     }}
 
 />
 
-</Colorpalette.primary>
+  <ColorItem
+    title="Blue"
+    colors={{
+      blue01: Theme.palette.blue01,
+      blue02: Theme.palette.blue02,
+      blue03: Theme.palette.blue03,
+      blue04: Theme.palette.blue04,
+      blue05: Theme.palette.blue05,
+    }}
+  />
+  <ColorItem
+    title="Error"
+    colors={{
+      error01: Theme.palette.error01,
+      error02: Theme.palette.error02,
+    }}
+  />
+  <ColorItem
+    title="Sucess"
+    colors={{
+      success: Theme.palette.success01,
+    }}
+  />
+</ColorPalette>

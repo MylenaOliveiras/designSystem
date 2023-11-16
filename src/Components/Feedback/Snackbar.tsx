@@ -4,6 +4,7 @@ import { OutlinedButton } from "../Button/Outlined";
 import { ContainedButton } from "../Button/Contained";
 import { AlertProps } from "@mui/material";
 import { useState } from "react";
+import { Theme } from "../../Theme";
 
 export interface IActionProps {
   text: string;
@@ -31,12 +32,11 @@ export default function Snackbar({ type, message, actions }: SnackbarProps) {
       <Alert
         severity={type}
         sx={{
-          backgroundColor: "#ffffff",
+          backgroundColor: `${Theme.palette.white01}`,
           color: "black",
-          fontFamily: '"Montserrat", sans-serif',
           fontSize: "16px",
-          lineHeight: "24px",
-          boxShadow: "0px 8px 16px 0px rgba(0, 0, 0, 0.08)",
+          lineHeight: `${Theme.typography.h2.lineHeight}px`,
+          boxShadow: `${Theme.shadows[3]}`,
           gap: "1rem",
           padding: "1rem",
           flexDirection: "column",

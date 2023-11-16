@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
-import { Base, IBaseProps } from "./TextField";
+import { TextField, ITextFieldProps } from "./TextField";
 import { Form, useForm } from "react-hook-form";
 
-const meta: Meta<typeof Base> = {
+const meta: Meta<typeof TextField> = {
   title: "Input/TextField",
-  component: Base,
+  component: TextField,
 
   parameters: {
     controls: {
@@ -14,14 +14,14 @@ const meta: Meta<typeof Base> = {
 };
 export default meta;
 
-type StoryArgs = IBaseProps;
+type StoryArgs = ITextFieldProps;
 
 const Template: Story<StoryArgs> = (args) => {
   const { control } = useForm();
 
   return (
     <Form control={control} onSubmit={() => {}}>
-      <Base {...args} control={control} />
+      <TextField {...args} control={control} />
     </Form>
   );
 };

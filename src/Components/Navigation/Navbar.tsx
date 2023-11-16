@@ -12,26 +12,27 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import { useState } from "react";
+import { Theme } from "../../Theme";
 
 export const StyledBottomNavigation = styled(BottomNavigation)`
   &.${bottomNavigationClasses.root} {
-    box-shadow: 0px -8px 16px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: ${Theme.shadows[2]};
     border-radius: 8px 8px 0px 0px;
 
     span {
-      font-size: 12px;
+      font-size: ${Theme.typography.h3.fontSize}px;
     }
   }
 `;
 
 export const StyledBottomNavigationAction = styled(BottomNavigationAction)`
   &.${bottomNavigationActionClasses.root} {
-    color: #bebebe;
+    color: ${Theme.palette.gray02};
     line-height: 160%;
-    font-size: 12px;
+    font-size: ${Theme.typography.h3.fontSize}px;
 
     &.${bottomNavigationActionClasses.selected} {
-      color: #4894ff;
+      color: ${Theme.palette.blue02};
     }
   }
 `;

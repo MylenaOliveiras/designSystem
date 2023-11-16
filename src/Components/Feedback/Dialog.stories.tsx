@@ -28,7 +28,13 @@ const Template: Story<StoryArgs> = (args) => {
         Abrir modal
       </ContainedButton>
 
-      <Dialog {...args} open={open} />
+      <Dialog
+        {...args}
+        open={open}
+        onClose={() => {
+          setOpen(false);
+        }}
+      />
     </>
   );
 };

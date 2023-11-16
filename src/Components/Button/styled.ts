@@ -1,53 +1,87 @@
 import Button, { buttonClasses } from "@mui/material/Button";
 import styled from "styled-components";
-import theme from "../../Theme/Theme";
+import { Theme} from "../../Theme";
+
+
 
 export const ButtonBase = styled(Button)`
   &.${buttonClasses.root} {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: ${Theme.typography.h2.fontWeight};
+    font-size: ${Theme.typography.h2.fontSize}px;
     text-transform: none;
     padding: 16px;
     border-radius: 8px;
-    color: ${theme.palette.primary["white01"]};
+    color: ${Theme.palette.white01};
 
     &:hover {
-      background-color: ${theme.palette.primary.blue03};
+      background-color: ${Theme.palette.blue03};
     }
 
     &:active {
+      padding: 14px;
       border: 2px solid #4894ff;
-      background: ${theme.palette.primary.blue04};
+      background: ${Theme.palette.blue04};
     }
 
     &:focus {
-      border: 2px solid #4894ff;
       padding: 14px;
-      background: ${theme.palette.primary.blue05};
-      box-shadow: ${theme.boxShadow.shadow01};
+      border: 2px solid #4894ff;
+      background: ${Theme.palette.blue05};
+      box-shadow: ${Theme.shadows[1]};
     }
 
     &:disabled {
-      background: ${theme.palette.primary.gray01};
-      box-shadow: ${theme.boxShadow.shadow01};
+      background: ${Theme.palette.gray01};
+      box-shadow: ${Theme.shadows[1]};
     }
   }
 
-  &.${buttonClasses.sizeSmall} {
-    font-size: 12px;
-    line-height: 24px;
+  &.${buttonClasses.outlined} {
+    color: ${Theme.palette.blue03};
+    padding: 14px;
+
+    &:active, &:focus {
+      padding: 14px;
+      border: 2px solid #4894ff;
+      background: ${Theme.palette.blue04};
+    }
+
+    &.${buttonClasses.sizeSmall} {
+    font-size: ${Theme.typography.h3.fontSize}px;
     padding: 8px;
+
+    &:active, &:focus {
+      padding: 8px;
+    }
+    
   }
 
   &.${buttonClasses.sizeLarge} {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: ${Theme.typography.h1.fontSize}px;
     padding: 20px;
+
+    &:active, &:focus {
+     padding: 20px;
+      }
+  }
+  }  
+
+  &.${buttonClasses.sizeSmall} {
+    font-size: ${Theme.typography.h3.fontSize}px;
+    padding: 8px;
+
+    &:active, &:focus {
+      padding: 6px;
+    }
+    
   }
 
-  &.${buttonClasses.outlined} {
-    color: ${theme.palette.primary.blue03};
+  &.${buttonClasses.sizeLarge} {
+    font-size: ${Theme.typography.h1.fontSize}px;
+    padding: 20px;
+
+    &:active, &:focus {
+     padding: 18px;
+      }
   }
 `;

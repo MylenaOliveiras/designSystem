@@ -1,5 +1,7 @@
 import type { Preview } from "@storybook/react";
-import ThemeProvider from "../src/Theme/ThemeProvider";
+import { ThemeProvider } from "../src/Theme";
+import { StyledEngineProvider } from "@mui/material/styles";
+import type { Meta } from "@storybook/react";
 import React from "react";
 
 const preview: Preview = {
@@ -16,9 +18,9 @@ const preview: Preview = {
 
 export default preview;
 
-const decorators = [
+export const decorators: Meta["decorators"] = [
   (Story) => (
-    <ThemeProvider >
+    <ThemeProvider>
       <Story />
     </ThemeProvider>
   ),

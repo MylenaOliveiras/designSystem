@@ -15,18 +15,17 @@ import { IActionProps } from "./Snackbar";
 import { OutlinedButton } from "../Button/Outlined";
 import { Close } from "@mui/icons-material";
 import styled from "styled-components";
+import { Theme } from "../../Theme";
 
 export interface IDialogProps extends DialogProps {
   title: string;
   actions?: [primary: IActionProps, secondary?: IActionProps | null];
   hiddenCloseButton?: boolean;
   open: boolean;
-  setOpen: () => void;
+  onClose: () => void;
 }
 
 export const StyledDialog = styled(MUIDialog)`
-  font-family: "Montserrat", sans-serif;
-
   .${dialogClasses.paper} {
     border-radius: 8px;
     padding: 16px;
@@ -34,16 +33,16 @@ export const StyledDialog = styled(MUIDialog)`
   }
   .${dialogTitleClasses.root} {
     padding: 0;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: ${Theme.typography.h1.fontSize}px;
+    font-weight: ${Theme.typography.h1.fontWeight};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #1f1f1f;
+    color: ${Theme.palette.gray05};
   }
 
   .${dialogContentClasses.root} {
-    color: #5c5c5c;
+    color: ${Theme.palette.gray03};
     padding: 0;
   }
 
@@ -59,15 +58,17 @@ export default function Dialog({
   actions,
   hiddenCloseButton,
   open,
-  setOpen,
+  onClose,
 }: IDialogProps) {
   return (
     <StyledDialog open={open}>
       <DialogTitle>
         {title}
         {!hiddenCloseButton && (
-          <IconButton onClick={() => setOpen()}>
-            <Close sx={{ color: "#000", fontSize: "16px" }} />
+          <IconButton onClick={onClose}>
+            <Close
+              sx={{ color: `${Theme.palette.gray04}`, fontSize: "16px" }}
+            />
           </IconButton>
         )}
       </DialogTitle>

@@ -2,11 +2,11 @@ import React from "react";
 import { ButtonProps, buttonClasses } from "@mui/material/Button";
 import styled from "styled-components";
 import { ButtonBase } from "./styled";
-import theme from "../../Theme/Theme";
+import { Theme } from "../../Theme";
 
 export const StyledContainedButton = styled(ButtonBase)`
   &.${buttonClasses.root} {
-    background-color: ${theme.palette.primary.blue02};
+    background-color: ${Theme.palette.blue02};
   }
 `;
 

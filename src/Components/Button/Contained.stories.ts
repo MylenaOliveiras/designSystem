@@ -4,6 +4,15 @@ import { ContainedButton } from "./Contained";
 const meta = {
   title: "Button/Contained",
   component: ContainedButton,
+  parameters: {
+    controls: {
+      include: [
+        'disabled',
+        'size',
+        'children',
+      ],
+    },
+  },
 } satisfies Meta<typeof ContainedButton>;
 
 export default meta;

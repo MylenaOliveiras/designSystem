@@ -4,6 +4,15 @@ import { OutlinedButton } from "./Outlined";
 const meta: Meta<typeof OutlinedButton> = {
   title: "Button/Outlined",
   component: OutlinedButton,
+  parameters: {
+    controls: {
+      include: [
+        'disabled',
+        'size',
+        'children',
+      ],
+    },
+  },
 };
 export default meta;
 
