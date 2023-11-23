@@ -1,4 +1,3 @@
-
 import type { Meta, StoryObj } from "@storybook/react";
 import Navbar from "./Navbar";
 
@@ -10,6 +9,4 @@ export default meta;
 
 type Story = StoryObj<typeof Navbar>;
 
-export const Playground: Story = {}; 
-
-
+export const Playground: Story = {};

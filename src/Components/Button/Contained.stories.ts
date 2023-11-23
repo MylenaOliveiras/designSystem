@@ -6,11 +6,7 @@ const meta = {
   component: ContainedButton,
   parameters: {
     controls: {
-      include: [
-        'disabled',
-        'size',
-        'children',
-      ],
+      include: ["disabled", "size", "children"],
     },
   },
 } satisfies Meta<typeof ContainedButton>;
@@ -29,5 +25,5 @@ export const Playground: Story = {
       options: ["small", "medium", "large"],
       control: { type: "radio" },
     },
-    }
+  },
 };

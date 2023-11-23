@@ -12,7 +12,5 @@ type Story = StoryObj<typeof Switch>;
 export const Playground: Story = {
   args: {
     disabled: false,
-    },
+  },
 };
-
-

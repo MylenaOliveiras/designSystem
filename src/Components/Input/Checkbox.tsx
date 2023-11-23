@@ -1,5 +1,6 @@
 import { CheckboxProps, Checkbox as UnStyledCheckbox } from "@mui/material";
 import { Theme } from "../../Theme";
+import React from "react";
 
 export default function Checkbox({ disabled }: CheckboxProps) {
   return (

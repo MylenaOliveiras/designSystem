@@ -15,7 +15,7 @@ export const StyledOutLinedButton = styled(ButtonBase)`
     &:hover,
     &:focus,
     &:active {
-      color: ${Theme.palette.blue03};
+      color: ${Theme.palette.white01};
     }
   }
 `;
