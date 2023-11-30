@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Control, FieldValues, useController } from "react-hook-form";
+import { useController } from "react-hook-form";
 import {
   InputBase,
   InputBaseProps,
@@ -53,14 +53,12 @@ export const StyledFormHelperText = styled(FormHelperText)`
 export interface ITextFieldProps extends InputBaseProps {
   label?: string;
   name: string;
-  control: Control<FieldValues>;
 }
 
 export const TextField: React.FC<ITextFieldProps> = ({
   name,
   disabled,
   label,
-  control,
   required,
   ...rest
 }) => {
@@ -68,19 +66,18 @@ export const TextField: React.FC<ITextFieldProps> = ({
     fieldState: { error, isTouched },
     field: { onChange, onBlur, value },
   } = useController({
-    control,
     name,
     defaultValue: "",
     rules: {
       required: {
-        value: true,
-        message: "Campo obrigatório",
+        value: required ? true : false,
+        message: "Este campo é obrigatório",
       },
     },
   });
 
   return (
-    <>
+    <div>
       <StyledInputLabel>{label}</StyledInputLabel>
       <StyledTextField
         disabled={disabled}
@@ -88,12 +85,12 @@ export const TextField: React.FC<ITextFieldProps> = ({
         onBlur={onBlur}
         value={value}
         required={required}
-        error={isTouched && !!error}
+        error={!!error && isTouched}
         {...rest}
       />
-      {error && isTouched && (
+      {error && isTouched && !disabled && (
         <StyledFormHelperText>{error.message}</StyledFormHelperText>
       )}
-    </>
+    </div>
   );
 };

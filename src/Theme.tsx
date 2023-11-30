@@ -2,6 +2,7 @@ import {
   createTheme,
   ThemeProvider as MUIThemeProvider,
 } from "@mui/material/styles";
+import React from "react";
 
 interface ISharedPalette {
   white01: string;

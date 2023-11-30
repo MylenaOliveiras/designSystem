@@ -1,11 +1,11 @@
 import { Meta, Story } from "@storybook/react";
-import { TextField, ITextFieldProps } from "./TextField";
-import React from "react";
+import Checkbox, { ICheckboxProps } from "./Checkbox";
 import { Form } from "../Form/Form";
+import React from "react";
 
-const meta: Meta<typeof TextField> = {
-  title: "Input/TextField",
-  component: TextField,
+const meta: Meta<typeof Checkbox> = {
+  title: "Input/Checkbox",
+  component: Checkbox,
 
   parameters: {
     controls: {
@@ -15,21 +15,22 @@ const meta: Meta<typeof TextField> = {
 };
 export default meta;
 
-type StoryArgs = ITextFieldProps;
+type StoryArgs = ICheckboxProps;
 
 const Template: Story<StoryArgs> = (args) => {
   return (
     <Form onSubmit={() => {}}>
-      <TextField {...args} />
+      <Checkbox {...args} />
     </Form>
   );
 };
 
 export const Playground: Story<StoryArgs> = Template.bind({});
 Playground.args = {
-  label: "Label",
+  name: "checkbox",
+  label:
+    "Declaro que li e estou de acordo com os Termos de Uso e Política de Privacidade",
   placeholder: "Placeholder",
   disabled: false,
   required: true,
-  name: "teste",
 };

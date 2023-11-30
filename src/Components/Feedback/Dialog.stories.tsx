@@ -42,7 +42,7 @@ const Template: Story<StoryArgs> = (args) => {
 
 export const Playground: Story<StoryArgs> = Template.bind({});
 Playground.args = {
-  title: "Título",
+  titleItem: "Título",
   actions: [
     {
       text: "Botão",
@@ -53,6 +53,6 @@ Playground.args = {
       onClick: () => {},
     },
   ],
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  contentItem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   hiddenCloseButton: false,
 };

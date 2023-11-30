@@ -19,11 +19,12 @@ import { Theme } from "../../Theme";
 import React from "react";
 
 export interface IDialogProps extends DialogProps {
-  title: string;
+  titleItem: string | React.ReactElement;
   actions?: [primary: IActionProps, secondary?: IActionProps | null];
   hiddenCloseButton?: boolean;
   open: boolean;
   onClose: () => void;
+  contentItem: string | React.ReactElement;
 }
 
 export const StyledDialog = styled(MUIDialog)`
@@ -54,8 +55,8 @@ export const StyledDialog = styled(MUIDialog)`
 `;
 
 export default function Dialog({
-  title,
-  content,
+  titleItem,
+  contentItem,
   actions,
   hiddenCloseButton,
   open,
@@ -64,7 +65,7 @@ export default function Dialog({
   return (
     <StyledDialog open={open}>
       <DialogTitle>
-        {title}
+        {titleItem}
         {!hiddenCloseButton && (
           <IconButton onClick={onClose}>
             <Close
@@ -73,7 +74,7 @@ export default function Dialog({
           </IconButton>
         )}
       </DialogTitle>
-      <DialogContent>{content}</DialogContent>
+      <DialogContent>{contentItem}</DialogContent>
       {actions && (
         <DialogActions>
           {actions[1] && (
