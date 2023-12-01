@@ -5,7 +5,7 @@ Documentação básica de alguns componentes para estudo.
 ### 📋 Pré-requisitos
 
 ```
-PNPM
+pnpm
 ```
 
 Consulte a **[documentação](https://pnpm.io/installation)** para maiores informações.
@@ -26,5 +26,5 @@ pnpm dev
 
 ## 🛠️ Construído com
 
-- [PNPM](https://pnpm.io/pt/) - gerenciador de dependência
-- [STORYBOOK](https://storybook.brpartnersdigital.com.br/) - ferramenta para desenvolvimento de interfaces
+- [pnpm](https://pnpm.io/pt/) - gerenciador de dependência
+- [storybook](https://storybook.brpartnersdigital.com.br/) - ferramenta para desenvolvimento de interfaces
