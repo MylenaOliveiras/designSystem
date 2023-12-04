@@ -10,7 +10,7 @@
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "format": "prettier --write --cache .",
-    "deploy": "npm version patch && npm publish"
+    "deploy": "pnpm version patch && pnpm publish"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
