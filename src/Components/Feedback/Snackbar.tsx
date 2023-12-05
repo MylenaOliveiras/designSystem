@@ -1,7 +1,7 @@
 import { Alert, Stack } from "@mui/material";
 import { Snackbar as MUISnackbar } from "@mui/material";
-import { OutlinedButton } from "../Button/Outlined";
-import { ContainedButton } from "../Button/Contained";
+import OutlinedButton from "../Button/Outlined";
+import ContainedButton from "../Button/Contained";
 import { AlertProps } from "@mui/material";
 import { useState } from "react";
 import { Theme } from "../../Theme";

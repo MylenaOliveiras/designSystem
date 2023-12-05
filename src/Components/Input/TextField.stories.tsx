@@ -1,5 +1,5 @@
 import { Meta, Story } from "@storybook/react";
-import { TextField, ITextFieldProps } from "./TextField";
+import TextField, { ITextFieldProps } from "./TextField";
 import React from "react";
 import { Form } from "../Form/Form";
 

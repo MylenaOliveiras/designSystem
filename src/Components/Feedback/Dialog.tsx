@@ -10,9 +10,9 @@ import {
   IconButton,
 } from "@mui/material";
 import MUIDialog from "@mui/material/Dialog";
-import { ContainedButton } from "../Button/Contained";
+import ContainedButton from "../Button/Contained";
 import { IActionProps } from "./Snackbar";
-import { OutlinedButton } from "../Button/Outlined";
+import OutlinedButton from "../Button/Outlined";
 import { Close } from "@mui/icons-material";
 import styled from "styled-components";
 import { Theme } from "../../Theme";
