@@ -1,6 +1,6 @@
 {
   "name": "@mylena-silva/my-ds",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
