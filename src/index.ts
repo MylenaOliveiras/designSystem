@@ -1,5 +1,4 @@
 import ContainedButton from "./components/Button/Contained";
-("./components/Button/Contained/Contained");
 import OutlinedButton from "./components/Button/Outlined";
 import Dialog from "./components/Feedback/Dialog";
 import Snackbar from "./components/Feedback/Snackbar";
@@ -10,13 +9,15 @@ import TextField from "./components/Input/TextField";
 import Select from "./components/Input/Select";
 import Navbar from "./components/Navigation/Navbar";
 
-export { ContainedButton };
-export { OutlinedButton };
-export { Dialog };
-export { Snackbar };
-export { Checkbox };
-export { Radio };
-export { Switch };
-export { TextField };
-export { Select };
-export { Navbar };
+export default {
+  ContainedButton,
+  OutlinedButton,
+  Dialog,
+  Snackbar,
+  Checkbox,
+  Radio,
+  Switch,
+  TextField,
+  Select,
+  Navbar,
+};
