@@ -8,6 +8,8 @@ import Switch from "./components/Input/Switch";
 import TextField from "./components/Input/TextField";
 import Select from "./components/Input/Select";
 import Navbar from "./components/Navigation/Navbar";
+import { FormWithMethods } from "./components/Form/Form";
+import { Form } from "./components/Form/Form";
 
 export default {
   ContainedButton,
@@ -20,4 +22,6 @@ export default {
   TextField,
   Select,
   Navbar,
+  Form,
+  FormWithMethods,
 };
