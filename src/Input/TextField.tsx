@@ -55,7 +55,7 @@ export interface ITextFieldProps extends InputBaseProps {
   name: string;
 }
 
-const TextField: React.FC<ITextFieldProps> = ({
+export const TextField: React.FC<ITextFieldProps> = ({
   name,
   disabled,
   label,
@@ -94,5 +94,3 @@ const TextField: React.FC<ITextFieldProps> = ({
     </div>
   );
 };
-
-export default TextField;

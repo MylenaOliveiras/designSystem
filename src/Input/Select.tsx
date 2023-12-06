@@ -55,7 +55,7 @@ export const StyledMenuItem = styled(MenuItem)`
   }
 `;
 
-export default function Select({
+export function Select({
   options,
   label,
   name,

@@ -1,5 +1,5 @@
 import { Meta, Story } from "@storybook/react";
-import Checkbox, { ICheckboxProps } from "./Checkbox";
+import { Checkbox, ICheckboxProps } from "./Checkbox";
 import { Form } from "../Form/Form";
 import React from "react";
 

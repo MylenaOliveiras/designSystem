@@ -1,6 +1,6 @@
 import { Meta, Story } from "@storybook/react";
 import { Form, useForm } from "react-hook-form";
-import Select, { ISelectProps } from "./Select";
+import { Select, ISelectProps } from "./Select";
 import React from "react";
 
 const meta: Meta<typeof Select> = {

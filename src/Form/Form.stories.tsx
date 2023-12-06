@@ -1,7 +1,7 @@
 import { Meta, Story } from "@storybook/react";
-import Select from "../Input/Select";
-import Checkbox from "../Input/Checkbox";
-import TextField from "../Input/TextField";
+import { Select } from "../Input/Select";
+import { Checkbox } from "../Input/Checkbox";
+import { TextField } from "../Input/TextField";
 import { Stack } from "@mui/material";
 import React, { useState } from "react";
 import { ContainedButton } from "../Button/Contained";

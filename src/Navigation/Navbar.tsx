@@ -38,7 +38,7 @@ export const StyledBottomNavigationAction = styled(BottomNavigationAction)`
   }
 `;
 
-export default function Navbar() {
+export function Navbar() {
   const [value, setValue] = useState(0);
 
   return (

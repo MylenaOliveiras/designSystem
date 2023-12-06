@@ -14,12 +14,7 @@ export interface ICheckboxProps extends CheckboxProps {
   name: string;
 }
 
-export default function Checkbox({
-  disabled,
-  label,
-  name,
-  required,
-}: ICheckboxProps) {
+export function Checkbox({ disabled, label, name, required }: ICheckboxProps) {
   const {
     fieldState: { error, isTouched },
     field: { onChange, onBlur, value },
