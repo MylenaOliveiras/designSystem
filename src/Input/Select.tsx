@@ -7,14 +7,13 @@ import {
 } from "@mui/material";
 import { StyledInputLabel } from "./TextField";
 import styled from "styled-components";
-import { Control, FieldValues, useController } from "react-hook-form";
+import { useController } from "react-hook-form";
 import { Theme } from "../Theme";
 import { FormHelperTextError } from "./FormHelperText";
 export interface ISelectProps extends SelectProps {
   options: string[];
   label: string;
   name: string;
-  control: Control<FieldValues>;
 }
 
 export const StyledSelect = styled(UnstyledSelect)`

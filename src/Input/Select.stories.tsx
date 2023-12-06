@@ -1,7 +1,6 @@
 import { Meta, Story } from "@storybook/react";
-import { Form, useForm } from "react-hook-form";
 import { Select, ISelectProps } from "./Select";
-import React from "react";
+import { Form } from "../Form/Form";
 
 const meta: Meta<typeof Select> = {
   title: "Input/Select",
@@ -17,11 +16,9 @@ export default meta;
 type StoryArgs = ISelectProps;
 
 const Template: Story<StoryArgs> = (args) => {
-  const { control } = useForm();
-
   return (
-    <Form control={control} onSubmit={() => {}}>
-      <Select {...args} control={control} />
+    <Form onSubmit={() => {}}>
+      <Select {...args} />
     </Form>
   );
 };
