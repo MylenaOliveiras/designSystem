@@ -1,9 +1,9 @@
 {
   "name": "@mylena-silva/my-ds",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "type": "module",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
