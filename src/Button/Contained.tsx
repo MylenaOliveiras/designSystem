@@ -10,7 +10,7 @@ export const StyledContainedButton = styled(ButtonBase)`
   }
 `;
 
-const ContainedButton: React.FC<ButtonProps> = ({
+export const ContainedButton: React.FC<ButtonProps> = ({
   disabled = false,
   ...rest
 }) => (
@@ -21,5 +21,3 @@ const ContainedButton: React.FC<ButtonProps> = ({
     {...rest}
   />
 );
-
-export default ContainedButton;

@@ -1,7 +1,7 @@
 import { Alert, Stack } from "@mui/material";
 import { Snackbar as MUISnackbar } from "@mui/material";
-import OutlinedButton from "../Button/Outlined";
-import ContainedButton from "../Button/Contained";
+import { OutlinedButton } from "../Button/Outlined";
+import { ContainedButton } from "../Button/Contained";
 import { AlertProps } from "@mui/material";
 import { useState } from "react";
 import { Theme } from "../Theme";
@@ -20,7 +20,7 @@ export interface SnackbarProps extends AlertProps {
   actions?: [primary: IActionProps, secondary?: IActionProps | null];
 }
 
-export default function Snackbar({ type, message, actions }: SnackbarProps) {
+export function Snackbar({ type, message, actions }: SnackbarProps) {
   const [open, setOpen] = useState(true);
 
   return (

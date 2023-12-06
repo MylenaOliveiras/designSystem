@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import ContainedButton from "./Contained";
+import { ContainedButton } from "./Contained";
 
 const meta = {
   title: "Button/Contained",

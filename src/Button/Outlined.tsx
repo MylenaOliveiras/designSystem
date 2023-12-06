@@ -20,7 +20,10 @@ export const StyledOutLinedButton = styled(ButtonBase)`
   }
 `;
 
-const OutlinedButton: React.FC<ButtonProps> = ({ disabled, ...rest }) => (
+export const OutlinedButton: React.FC<ButtonProps> = ({
+  disabled,
+  ...rest
+}) => (
   <StyledOutLinedButton
     variant="outlined"
     disabled={disabled}
@@ -28,5 +31,3 @@ const OutlinedButton: React.FC<ButtonProps> = ({ disabled, ...rest }) => (
     {...rest}
   />
 );
-
-export default OutlinedButton;
