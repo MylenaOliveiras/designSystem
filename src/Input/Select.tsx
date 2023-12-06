@@ -9,8 +9,7 @@ import { StyledInputLabel } from "./TextField";
 import styled from "styled-components";
 import { Control, FieldValues, useController } from "react-hook-form";
 import { Theme } from "../Theme";
-import React from "react";
-
+import { FormHelperTextError } from "./FormHelperText";
 export interface ISelectProps extends SelectProps {
   options: string[];
   label: string;
@@ -59,7 +58,6 @@ export function Select({
   options,
   label,
   name,
-  control,
   required,
   disabled,
   ...props
@@ -68,7 +66,6 @@ export function Select({
     fieldState: { error, isTouched },
     field: { onChange, onBlur, value },
   } = useController({
-    control,
     name,
     defaultValue: "",
     rules: {
@@ -96,6 +93,9 @@ export function Select({
           <StyledMenuItem value={option}>{option}</StyledMenuItem>
         ))}
       </StyledSelect>
+      {error && isTouched && !disabled && (
+        <FormHelperTextError>{error.message}</FormHelperTextError>
+      )}
     </>
   );
 }
