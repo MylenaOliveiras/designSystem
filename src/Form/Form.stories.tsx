@@ -3,7 +3,7 @@ import { Select } from "../Input/Select";
 import { Checkbox } from "../Input/Checkbox";
 import { TextField } from "../Input/TextField";
 import { Stack } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import { ContainedButton } from "../Button/Contained";
 import { FormWithMethods, useMethods } from "./Form";
 import { Dialog } from "../Feedback/Dialog";
@@ -55,13 +55,6 @@ const Template: Story = () => {
           required
         />
         <TextField name="subject" label="Assunto" fullWidth required />
-        <Select
-          name="teste"
-          label="teste"
-          options={["a", "b", "xc", "s", "Sd"]}
-          required
-          fullWidth
-        />
         <Checkbox
           name="checkbox"
           label="Declaro que li e estou de acordo com os Termos de Uso e Política de Privacidade"
