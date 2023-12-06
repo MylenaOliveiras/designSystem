@@ -4,7 +4,7 @@ import {
   Stack,
   Checkbox as UnStyledCheckbox,
 } from "@mui/material";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 import React from "react";
 import { useController } from "react-hook-form";
 import { StyledFormHelperText } from "./TextField";

@@ -4,7 +4,7 @@ import OutlinedButton from "../Button/Outlined";
 import ContainedButton from "../Button/Contained";
 import { AlertProps } from "@mui/material";
 import { useState } from "react";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 import React from "react";
 
 export interface IActionProps {

@@ -9,7 +9,7 @@ import { FormWithMethods, useMethods } from "./Form";
 import Dialog from "../Feedback/Dialog";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import { StyledTypography } from "./styled";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 
 const meta: Meta<typeof Select> = {
   title: "Form/Form",

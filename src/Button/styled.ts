@@ -1,6 +1,6 @@
 import Button, { buttonClasses } from "@mui/material/Button";
 import styled from "styled-components";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 
 export const ButtonBase = styled(Button)`
   &.${buttonClasses.root} {

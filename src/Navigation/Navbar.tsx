@@ -12,7 +12,7 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import { useState } from "react";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 import React from "react";
 
 export const StyledBottomNavigation = styled(BottomNavigation)`

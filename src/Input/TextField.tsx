@@ -10,7 +10,7 @@ import {
   FormHelperText,
   formHelperTextClasses,
 } from "@mui/material";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 
 const StyledTextField = styled(InputBase)`
   &.${inputBaseClasses.root} {

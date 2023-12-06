@@ -2,7 +2,7 @@ import React from "react";
 import { ButtonProps, buttonClasses } from "@mui/material/Button";
 import styled from "styled-components";
 import { ButtonBase } from "./styled";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 
 export const StyledContainedButton = styled(ButtonBase)`
   &.${buttonClasses.root} {
