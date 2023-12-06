@@ -69,14 +69,14 @@ export function Select({
     defaultValue: "",
     rules: {
       required: {
-        value: true,
+        value: required ? true : false,
         message: "Campo obrigatório",
       },
     },
   });
 
   return (
-    <>
+    <div>
       <StyledInputLabel>{label}</StyledInputLabel>
       <StyledSelect
         disabled={disabled}
@@ -88,13 +88,15 @@ export function Select({
         placeholder={label}
         {...props}
       >
-        {options.map((option) => (
-          <StyledMenuItem value={option}>{option}</StyledMenuItem>
+        {options.map((option, index) => (
+          <StyledMenuItem value={option} key={index}>
+            {option}
+          </StyledMenuItem>
         ))}
       </StyledSelect>
       {error && isTouched && !disabled && (
         <FormHelperTextError>{error.message}</FormHelperTextError>
       )}
-    </>
+    </div>
   );
 }
