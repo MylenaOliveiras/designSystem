@@ -54,7 +54,13 @@ const Template: Story = () => {
           fullWidth
           required
         />
-        <TextField name="subject" label="Assunto" fullWidth required />
+        <Select
+          name="subject"
+          label="Assunto"
+          options={["Dúvidas", "Ouvidoria", "Elogios"]}
+          fullWidth
+          required
+        />
         <Checkbox
           name="checkbox"
           label="Declaro que li e estou de acordo com os Termos de Uso e Política de Privacidade"

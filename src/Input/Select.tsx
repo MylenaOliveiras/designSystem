@@ -41,9 +41,10 @@ export const StyledSelect = styled(UnstyledSelect)`
       }
     }
   }
-
   &.${inputBaseClasses.error} {
-    border: 2px solid ${Theme.palette.error01};
+    fieldset {
+      border: 2px solid ${Theme.palette.error01};
+    }
   }
 `;
 
@@ -70,7 +71,7 @@ export function Select({
     rules: {
       required: {
         value: required ? true : false,
-        message: "Campo obrigatório",
+        message: "Este campo obrigatório",
       },
     },
   });
