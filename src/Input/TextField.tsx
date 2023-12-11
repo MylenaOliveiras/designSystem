@@ -7,10 +7,9 @@ import {
   InputLabel,
   inputLabelClasses,
   inputBaseClasses,
-  FormHelperText,
-  formHelperTextClasses,
 } from "@mui/material";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
+import { FormHelperTextError } from "./FormHelperText";
 
 const StyledTextField = styled(InputBase)`
   &.${inputBaseClasses.root} {
@@ -41,12 +40,6 @@ const StyledTextField = styled(InputBase)`
 export const StyledInputLabel = styled(InputLabel)`
   &.${inputLabelClasses.root} {
     color: ${Theme.palette.gray02};
-  }
-`;
-
-export const StyledFormHelperText = styled(FormHelperText)`
-  &.${formHelperTextClasses.root} {
-    color: ${Theme.palette.error01};
   }
 `;
 
@@ -89,7 +82,7 @@ export const TextField: React.FC<ITextFieldProps> = ({
         {...rest}
       />
       {error && isTouched && !disabled && (
-        <StyledFormHelperText>{error.message}</StyledFormHelperText>
+        <FormHelperTextError>{error.message}</FormHelperTextError>
       )}
     </div>
   );

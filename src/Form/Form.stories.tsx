@@ -1,15 +1,15 @@
 import { Meta, Story } from "@storybook/react";
-import Select from "../Input/Select";
-import Checkbox from "../Input/Checkbox";
+import { Select } from "../Input/Select";
+import { Checkbox } from "../Input/Checkbox";
 import { TextField } from "../Input/TextField";
 import { Stack } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import { ContainedButton } from "../Button/Contained";
 import { FormWithMethods, useMethods } from "./Form";
-import Dialog from "../Feedback/Dialog";
+import { Dialog } from "../Feedback/Dialog";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import { StyledTypography } from "./styled";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 
 const meta: Meta<typeof Select> = {
   title: "Form/Form",
@@ -54,7 +54,13 @@ const Template: Story = () => {
           fullWidth
           required
         />
-        <TextField name="subject" label="Assunto" fullWidth required />
+        <Select
+          name="subject"
+          label="Assunto"
+          options={["Dúvidas", "Ouvidoria", "Elogios"]}
+          fullWidth
+          required
+        />
         <Checkbox
           name="checkbox"
           label="Declaro que li e estou de acordo com os Termos de Uso e Política de Privacidade"

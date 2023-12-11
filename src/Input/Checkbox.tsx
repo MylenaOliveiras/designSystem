@@ -4,22 +4,16 @@ import {
   Stack,
   Checkbox as UnStyledCheckbox,
 } from "@mui/material";
-import { Theme } from "../../Theme";
-import React from "react";
+import { Theme } from "../Theme";
 import { useController } from "react-hook-form";
-import { StyledFormHelperText } from "./TextField";
+import { FormHelperTextError } from "./FormHelperText";
 
 export interface ICheckboxProps extends CheckboxProps {
   label?: string;
   name: string;
 }
 
-export default function Checkbox({
-  disabled,
-  label,
-  name,
-  required,
-}: ICheckboxProps) {
+export function Checkbox({ disabled, label, name, required }: ICheckboxProps) {
   const {
     fieldState: { error, isTouched },
     field: { onChange, onBlur, value },
@@ -55,7 +49,7 @@ export default function Checkbox({
         <InputLabel>{label}</InputLabel>
       </Stack>
       {error && isTouched && (
-        <StyledFormHelperText>{error.message}</StyledFormHelperText>
+        <FormHelperTextError>{error.message}</FormHelperTextError>
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 import { Typography, typographyClasses } from "@mui/material";
 import styled from "styled-components";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 
 export const StyledTypography = styled(Typography)`
   &.${typographyClasses.h1} {

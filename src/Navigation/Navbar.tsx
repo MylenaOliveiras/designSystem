@@ -12,7 +12,7 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 import { useState } from "react";
-import { Theme } from "../../Theme";
+import { Theme } from "../Theme";
 import React from "react";
 
 export const StyledBottomNavigation = styled(BottomNavigation)`
@@ -38,7 +38,7 @@ export const StyledBottomNavigationAction = styled(BottomNavigationAction)`
   }
 `;
 
-export default function Navbar() {
+export function Navbar() {
   const [value, setValue] = useState(0);
 
   return (

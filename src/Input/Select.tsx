@@ -7,15 +7,13 @@ import {
 } from "@mui/material";
 import { StyledInputLabel } from "./TextField";
 import styled from "styled-components";
-import { Control, FieldValues, useController } from "react-hook-form";
-import { Theme } from "../../Theme";
-import React from "react";
-
+import { useController } from "react-hook-form";
+import { Theme } from "../Theme";
+import { FormHelperTextError } from "./FormHelperText";
 export interface ISelectProps extends SelectProps {
   options: string[];
   label: string;
   name: string;
-  control: Control<FieldValues>;
 }
 
 export const StyledSelect = styled(UnstyledSelect)`
@@ -43,9 +41,10 @@ export const StyledSelect = styled(UnstyledSelect)`
       }
     }
   }
-
   &.${inputBaseClasses.error} {
-    border: 2px solid ${Theme.palette.error01};
+    fieldset {
+      border: 2px solid ${Theme.palette.error01};
+    }
   }
 `;
 
@@ -55,11 +54,10 @@ export const StyledMenuItem = styled(MenuItem)`
   }
 `;
 
-export default function Select({
+export function Select({
   options,
   label,
   name,
-  control,
   required,
   disabled,
   ...props
@@ -68,19 +66,18 @@ export default function Select({
     fieldState: { error, isTouched },
     field: { onChange, onBlur, value },
   } = useController({
-    control,
     name,
     defaultValue: "",
     rules: {
       required: {
-        value: true,
-        message: "Campo obrigatório",
+        value: required ? true : false,
+        message: "Este campo obrigatório",
       },
     },
   });
 
   return (
-    <>
+    <div>
       <StyledInputLabel>{label}</StyledInputLabel>
       <StyledSelect
         disabled={disabled}
@@ -92,10 +89,15 @@ export default function Select({
         placeholder={label}
         {...props}
       >
-        {options.map((option) => (
-          <StyledMenuItem value={option}>{option}</StyledMenuItem>
+        {options.map((option, index) => (
+          <StyledMenuItem value={option} key={index}>
+            {option}
+          </StyledMenuItem>
         ))}
       </StyledSelect>
-    </>
+      {error && isTouched && !disabled && (
+        <FormHelperTextError>{error.message}</FormHelperTextError>
+      )}
+    </div>
   );
 }

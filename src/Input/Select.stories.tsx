@@ -1,12 +1,10 @@
 import { Meta, Story } from "@storybook/react";
-import Checkbox, { ICheckboxProps } from "./Checkbox";
+import { Select, ISelectProps } from "./Select";
 import { Form } from "../Form/Form";
-import React from "react";
 
-const meta: Meta<typeof Checkbox> = {
-  title: "Input/Checkbox",
-  component: Checkbox,
-
+const meta: Meta<typeof Select> = {
+  title: "Input/Select",
+  component: Select,
   parameters: {
     controls: {
       include: ["disabled", "label", "placeholder"],
@@ -15,22 +13,22 @@ const meta: Meta<typeof Checkbox> = {
 };
 export default meta;
 
-type StoryArgs = ICheckboxProps;
+type StoryArgs = ISelectProps;
 
 const Template: Story<StoryArgs> = (args) => {
   return (
     <Form onSubmit={() => {}}>
-      <Checkbox {...args} />
+      <Select {...args} />
     </Form>
   );
 };
 
 export const Playground: Story<StoryArgs> = Template.bind({});
 Playground.args = {
-  name: "checkbox",
-  label:
-    "Declaro que li e estou de acordo com os Termos de Uso e Política de Privacidade",
+  label: "Label",
   placeholder: "Placeholder",
   disabled: false,
   required: true,
+  name: "teste",
+  options: ["item1", "item2", "item3"],
 };
