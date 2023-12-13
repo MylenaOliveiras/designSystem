@@ -19,12 +19,12 @@ import { Theme } from "../Theme";
 import React from "react";
 
 export interface IDialogProps extends DialogProps {
-  titleItem: string | React.ReactElement;
+  titleItem?: string | React.ReactElement;
   actions?: [primary: IActionProps, secondary?: IActionProps | null];
   hiddenCloseButton?: boolean;
   open: boolean;
-  onClose: () => void;
-  contentItem: string | React.ReactElement;
+  onClose?: () => void;
+  contentItem?: string | React.ReactElement;
 }
 
 export const StyledDialog = styled(MUIDialog)`

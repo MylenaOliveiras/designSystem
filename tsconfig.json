@@ -16,7 +16,7 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": ["src/**/*", "index.d.ts"],
+  "include": ["src/**/*", "index.d.ts", "tests/**/*.ts"],
   "exclude": ["**/.*/", "**/node_modules"],
   "compileOnSave": false
 }
