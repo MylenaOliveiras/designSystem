@@ -1,0 +1,19 @@
+{
+  "targetDefaults": {
+    "build": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "deploy": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
+  }
+}
